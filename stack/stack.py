@@ -4,13 +4,23 @@ class Stack:
     def push(self,item):
         self.stack.append(item)
     def pop(self):
-        ele=self.stack.pop()
-        print("popped..........",ele,"\n")
+        if(self.isempty):
+            print("stack is empty")
+        else:
+            ele=self.stack.pop()
+            print("popped..........",ele,"\n")
     def peek(self):
-        ele=self.stack[-1]
+        if(self.isempty):
+            print("stack is empty")
+        else:
+            ele=self.stack[-1]
         print("peeking ...........",ele,"\n")
     def print(self):
         print(self.stack)
+    def isempty(self):
+        if self.stack==[]:
+            return True
+        return False
     
 
 
