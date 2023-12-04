@@ -57,11 +57,30 @@ class BinaryTree:
     
     def preorder(self):
         self._preorder(self.root)
+        print("\n")
     def _preorder(self,root):
         if root is None:
             return None
         print(root.data,end=" ")
         self._preorder(root.left)
+        self._preorder(root.right)
+    def postorder(self):
+        self._postorder(self.root)
+        print("\n")
+    def _postorder(self,root):
+        if root is None:
+            return None
+        self._preorder(root.left)
+        self._preorder(root.right)
+        print(root.data,end=" ")
+    def inorder(self):
+        self._inorder(self.root)
+        print("\n")
+    def _inorder(self,root):
+        if root is None:
+            return None
+        self._preorder(root.left)
+        print(root.data,end=" ")
         self._preorder(root.right)
         
 
@@ -82,4 +101,6 @@ if __name__=="__main__":
     # result=bt.search(14)
     # print(result)
     bt.preorder()
+    bt.postorder()
+    bt.inorder()
 
