@@ -31,14 +31,14 @@ class BinaryTree:
                     else:
                         current=current.right
             return root
-    # def print_tree(self):
-    #     self._print_tree(self.root, 0)
+    def print_tree(self):
+        self._print_tree(self.root, 0)
 
-    # def _print_tree(self, root, level):
-    #     if root is not None:
-    #         self._print_tree(root.right, level + 1)
-    #         print("   " * level + str(root.data))
-    #         self._print_tree(root.left, level + 1)
+    def _print_tree(self, root, level):
+        if root is not None:
+            self._print_tree(root.right, level + 1)
+            print("   " * level + str(root.data))
+            self._print_tree(root.left, level + 1)
     def search(self,data): 
         if self.root is None:
             print("tree is empty")
