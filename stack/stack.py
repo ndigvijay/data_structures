@@ -14,7 +14,7 @@ class Stack:
             print("stack is empty")
         else:
             ele=self.stack[-1]
-        print("peeking ...........",ele,"\n")
+            print("peeking ...........",ele,"\n")
     def print(self):
         print(self.stack)
     def isempty(self):
@@ -27,9 +27,9 @@ class Stack:
 
 if __name__=="__main__":
     stk1=Stack()
-    stk1.push(5)
-    stk1.push(10)
-    stk1.push(15)
+    # stk1.push(5)
+    # stk1.push(10)
+    # stk1.push(15)
     stk1.pop()
     stk1.peek()
     stk1.print()
